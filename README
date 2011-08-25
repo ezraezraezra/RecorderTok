@@ -4,7 +4,7 @@
  * 
  * Date:        August 2011
  *
- * Title:       Recorder Embed Widget      http://triviatok.opentok.com
+ * Title:       Recorder Embed Widget      http://recorder.opentok.com
  * Description: Initial prototype of the recorder embed widget for
  *              TokBox using the beta Archive API. User inserts one
  *              line of HTML into their document, which loads a JS
