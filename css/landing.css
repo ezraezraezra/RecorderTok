@@ -1,0 +1,214 @@
+@CHARSET "UTF-8";
+/*
+ * Project:     Recorder Embed Widget
+ * Description: Initial prototype of the recorder embed widget for
+ *              TokBox using the beta Archive API. User inserts one
+ *              line of HTML into their document, which loads a JS
+ *              file that injects the widget into the page.          
+ * Website:     http://recorder.opentok.com
+ * 
+ * Author:      Ezra Velazquez
+ * Website:     http://ezraezraezra.com
+ * Date:        August 2011
+ * 
+ */
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/landing/backdrop.png') repeat 0 0;
+	}
+#container {
+	width: 100%;
+	height: 100%;
+}
+#corner_bl {
+	position: relative;
+	width: 8px;
+	height: 7px;
+	float: left;
+	background: url('../img/landing/corner_bl.png') no-repeat 0 0;
+}
+#corner_br {
+	position: relative;
+	width: 8px;
+	height: 7px;
+	float: right;
+	background: url('../img/landing/corner_br.png') no-repeat 0 0;
+}
+#corner_container_bottom {
+	width: 322px;
+	height: 7px;
+	background-color: transparent;
+	z-index: 150;
+	position: absolute;
+	top: 335px;
+	left: -1px;
+	visibility: hidden;
+}
+#corner_container_top {
+	width: 320px;
+	height: 7px;
+	background-color: transparent;
+	z-index: 150;
+	position: absolute;
+}
+#corner_tl {
+	position: relative;
+	width: 8px;
+	height: 7px;
+	float: left;
+	background: url('../img/landing/corner_tl.png') no-repeat 0 0;
+}
+#corner_tr {
+	position: relative;
+	width: 8px;
+	height: 7px;
+	float: right;
+	background: url('../img/landing/corner_tr.png') no-repeat 0 0;
+}
+#from_name {
+	background-color: transparent;
+	width: 100%;
+	height: 30px;
+	font-family: "Lucida Grande, Helvetica, sans-serif";
+	color: white;
+	font-size: 30px;
+}
+#loading_screen {
+	width: 320px;
+	height: 240px;
+	position: absolute;
+	z-index: 0;
+	background-color: black;
+}
+#middle_container {
+	width: 100%;
+	height: 18px;
+	position: absolute;
+	top:451px;
+	left: 0px;
+	background: url('../img/landing/shadow_line.png') repeat-x 0 0;
+}
+#name_logo {
+	background: url('../img/landing/logo_name.png') no-repeat 0 0;
+	float: right;
+	width: 127px;
+	height: 22px;
+	margin-top: 9px;
+}
+#play_button {
+	width: 79px;
+	height: 76px;
+	-webkit-transition: opacity .2s ease-in-out, background 0s 200s;
+	-moz-transition: opacity .2s ease-in-out, background 0s 200s;
+	-o-transition: opacity .2s ease-in-out, background 0s 200s;
+	background: url('../img/landing/play_button.png') no-repeat 0px 0px;
+}
+#play_button:hover {
+	background-position: 0 -120px;
+	opacity: 0;
+}
+#play_button_container {
+	width: 79px;
+	height: 76px;
+	position: relative;
+	top: 86px;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-transition: opacity .2s ease-in-out, background 0s 200s;
+	-moz-transition: opacity .2s ease-in-out, background 0s 200s;
+	-o-transition: opacity .2s ease-in-out, background 0s 200s;
+	background: url('../img/landing/play_button.png') no-repeat 0px -80px;
+}
+#playback_container {
+	background-color: transparent;
+	width: 320px;
+	height: 415px;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 250px;
+}
+.progress_ball {
+	background: url('../img/pop_up/loading_ball.png') no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+	position: relative;
+	float: left;
+	-webkit-animation-name: progress_loader;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: linear;
+	opacity: 0;
+}
+#progress_ball_container {
+	width: 76px;
+	height: 50px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	top: 90px;
+}
+#progress_ball_1 {
+	-webkit-animation-delay: .1s;
+}
+#progress_ball_2 {
+	-webkit-animation-delay: .3s;
+}
+#progress_ball_3 {
+	-webkit-animation-delay: .5s;
+}
+#progress_ball_4 {
+	-webkit-animation-delay: .7s;
+}
+#static_screen {
+	width: 320px;
+	height: 240px;
+	position: absolute;
+	z-index: 100;
+	background: url('../img/landing/static_screen.png') no-repeat 0 0;
+}
+#tb_playback_container {
+	width: 320px;
+	height: 240px;
+	position: absolute;
+	z-index: 50;
+}
+#teardrop_logo {
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	background: url('../img/landing/logo_teardrop.png') no-repeat 0 0;
+	cursor: pointer;
+}
+#top_container {
+	width: 100%;
+	height: 469px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('../img/landing/gradient_top.png') repeat-x 0 0;
+}
+#video_container {
+	background-color: tranparent;
+	width: 320px;
+	height: 240px;
+	margin-top: 7px;
+}
+#video_shadow {
+	background: url('../img/landing/shadow_below_video.png') no-repeat -4px 0;
+	width: 320px;
+	height: 37px;
+	margin-top: 38px;
+}
+@-webkit-keyframes progress_loader {
+	0%{opacity: 0;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+}

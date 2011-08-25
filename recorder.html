@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Recorder Widget</title>
+
+<link rel="stylesheet" href="css/recorder.css" type="text/css" media="screen" charset="utf-8">
+<script type="text/javascript" charset="utf-8">
+	var API_KEY = "1157291";
+	var SESSION_ID = "11b104288b816fcde7a862ca6f5697ba8603f189";
+	var TOKEN = "moderator_token";
+	var playback_archiveId;
+</script>
+<script src="http://staging.opentok.com/v0.92/js/TB.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/tb.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/recorder.js"></script>
+
+</head>
+<body>
+	<div id="container">
+		<div id="widget_container">
+			<div id="thank_you_screen"></div>
+			<div id="video_container">
+				<div id="loading_container">
+					<div id="progress_ball_container">
+						<div id="progress_ball_1" class="progress_ball"></div>
+						<div id="progress_ball_2" class="progress_ball"></div>
+						<div id="progress_ball_3" class="progress_ball"></div>
+						<div id="progress_ball_4" class="progress_ball"></div>
+					</div>
+				</div>
+				<div id="tb_container">
+					<div id="tb_publisher_container"></div>
+					<div id="tb_playback_container"></div>
+				</div>
+				<div id="pre_record_countdown_container">
+					<div id="pre_record_display_number">3</div>
+				</div>
+				<div id="pop_up_container">
+					<div id="user_info_container">
+						<form id="user_info_form" class="cmxform" method="get" action="">
+							<div id="user_name_container">
+								<label for="user_name_input" id="user_name_label">Your Name</label><br/>
+								<input type="text" id="user_name_input" name="user_name_input"/>
+							</div>
+							<div id="user_email_container">
+								<label for="user_email_input" id="user_email_label">Your Email</label><br/>
+								<input type="text" id="user_email_input" name="user_email_input"/>
+							</div>
+					</div>
+					<div id="send_button_container">
+						<div id="send_button" class="check">
+						
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+			<div id="footer_container">
+				<div id="phase_one_button_container">
+					<div id="record_button"></div>
+					<div id="stop_record_button_container">
+						<div id="stop_record_button"></div>
+					</div>
+					<div id="stop_playback_button_container">
+						<div id="stop_playback_button"></div>
+					</div>
+					<div id="countdown_timer_container">
+						10:00
+					</div>
+				</div>
+				<div id="phase_two_button_container">
+					<div id="play_button_container">
+						<div id="play_button"></div>
+					</div>
+					<div id="start_over_button_container">
+						<div id="start_over_button"></div>
+					</div>
+				</div>
+				<div id="opentok_link"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
